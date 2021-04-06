@@ -1,0 +1,14 @@
+<main>
+  <div class='landing'>
+    <h1>Welcome to Tokyo Watch Party!</h1>
+    <p>Enter the name and code to start partyting</p>
+    <%= form_with(url: '/login', method: 'post') do |f| %>
+      <%= f.text_field :id_name, placeholder: "please enter your name" %>
+      <%= f.password_field :id_name, placeholder: "enter the room password" %>
+      <%= f.submit "Submit" %>
+      <% flash.each do |type, msg| %>
+        <p class="error"><%= "error" %></p>
+      <% end %>
+    <% end %>
+  </div>
+</main>
