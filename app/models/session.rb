@@ -1,7 +1,7 @@
 require 'opentok'
 
 class Session < ApplicationRecord
-  @opentok = Opentok::OpenTok.new ENV['OPENTOK_API_KEY'], ENV['OPTOK_API_SECRET']
+  @opentok = Opentok::OpenTok.new ENV['OPENTOK_API_KEY'], ENV['OPENTOK_API_SECRET']
 
   # We want to do 2 things:
   def self.create_new_session
@@ -26,8 +26,10 @@ class Session < ApplicationRecord
     else
       @session_id = create_new_session
     end
+  end
   # Create a token for session and to be able to connect to session
     def self.create_token(username, moderator_name, session_id)
       @token = username == moderator_name ? @opentok.generate_token(session_id, { role: :moderator }) : @opentok.generate_token(session_id)
     end
+
 end
