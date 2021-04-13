@@ -22,7 +22,8 @@ class VideoController < ApplicationController
   def login
     @name = user_params[:name]
     if user_params[:password] == ENV['PARTY_PASSWORD']
-      redirect_to login_path(name: @name)
+      # raise
+      redirect_to party_path(name: @name)
     else
       redirect_to('/', flash: { error: 'Incorrect password' })
     end

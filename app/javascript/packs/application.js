@@ -11,3 +11,7 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import './app_helpers.js'
+import './opentok_videos.js'
+import './opentok_screenshare.js'

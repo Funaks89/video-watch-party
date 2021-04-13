@@ -1,9 +1,9 @@
 require 'opentok'
 
 class Session < ApplicationRecord
-  api_key = '47186494'
-  api_secret = '4cb875bc59cb6a18df44862b79ff3cfa3d7270db'
-  @opentok = OpenTok::OpenTok.new api_key, api_secret
+  # api_key = '47186494'
+  # api_secret = '4cb875bc59cb6a18df44862b79ff3cfa3d7270db'
+  @opentok = OpenTok::OpenTok.new ENV['OPENTOK_API_KEY'], ENV['OPENTOK_API_KEY_SECRET']
   
   # We want to do 2 things:
   def self.create_new_session
