@@ -1,11 +1,13 @@
 require 'opentok'
 
 class Session < ApplicationRecord
-  @opentok = Opentok::OpenTok.new ENV['OPENTOK_API_KEY'], ENV['OPENTOK_API_SECRET']
-
+  api_key = '47186494'
+  api_secret = '4cb875bc59cb6a18df44862b79ff3cfa3d7270db'
+  @opentok = OpenTok::OpenTok.new api_key, api_secret
+  
   # We want to do 2 things:
   def self.create_new_session
-    session = @opentok.create_session
+    session = @opentok.create_session :media_mode => :routed
     record = Session.new
     record.session_id = session.session_id
     @session_id = session.session_id
