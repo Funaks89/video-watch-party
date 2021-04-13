@@ -2,14 +2,14 @@ export const screenshareMode = (session, mode) => {
       if (mode == 'on') {
         window.location = '/screenshare?name=' + name;
         session.signal({
-          type: 'screenshare';
-          data: 'on';
+          type: 'screenshare',
+          data: 'on',
         });
       } else if (mode == 'off') {
         window.location = '/party?name=' + name;
         session.signal({
-          type: 'screenshare';
-          data: 'off';
+          type: 'screenshare',
+          data: 'off',
         })
       };
     };
