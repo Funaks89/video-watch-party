@@ -42,7 +42,7 @@ export default class Chat {
         self.chatWindow.classList.add('active');
       });
 
-      this.closeChatbtn.addEventListener('click', (event) => {
+      this.closeChatBtn.addEventListener('click', (event) => {
         self.chatWindow.classList.remove('active');
       })
     } 
