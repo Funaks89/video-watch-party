@@ -1,0 +1,29 @@
+  
+.btn-chat {
+  height: 5em;
+  width: 5em;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .2), 0 3px 6px 0 rgba(0, 0, 0, .19);
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  cursor: pointer;
+}
+
+.btn-chat svg {
+  height: 4em;
+  width: 2.5em;
+}
+
+.btn-close {
+  height: 2em;
+  width: 2em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-close svg {
+  height: 1em;
+  width: 1em;
+}

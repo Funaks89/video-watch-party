@@ -14,29 +14,28 @@ export default class Party {
   }
 
     setupVideoPublisher() {
-      return Option.initPublisher('publisher', {
+      return OT.initPublisher('publisher', {
         insertMode: 'append',
         width: "100%",
         height: "100%"
-      }, (error) {
+      }, function  (error) {
         if (error) {
           console.error('Failed to initalise publisher', error);
         };
       });
     }
-}
-  setEventHandlers() {
-    let self = this;
+    setEventHandlers() {
+      let self = this;
     this.session.on({
-      sessionConnected: (event) => {
-        self.session.publish(self.videoPublisher, (error) {
+      sessionConnected: function (event) {
+        self.session.publish(self.videoPublisher, function (error) {
           if (error) {
             console.error('Failed to publish', error);
           }
         });
       },
-
-      streamCreated: (event) => {
+      
+      streamCreated: function(event) {
         self.session.subscribe(event.stream, 'subscirbers', {
           insertMode: 'append',
           width: '100%',
@@ -46,25 +45,26 @@ export default class Party {
             console.error('Failed to subscribe', error);
           }
         });
-
+        
       },
-      connectionCreated: (event) => {
+      connectionCreated: function(event) {
         self.connectionCount++;
         self.participantCount.textContent = `${self.connectionCount} Participants`;
         streamLayout(self.subscribers, self.connectionCount);
       },
-
-      connectionDestroyed: (event) => {
+      
+      connectionDestroyed: function(event) {
         self.connectionCount--;
         self.participantCount.textContent = `${self.connectionCount} Participants`;
         streamLayout(self.subscribers, self.connectionCount);
       }
     });
-
-    this.watchLink.addEventListener('click', (event) => {
+    
+    this.watchLink.addEventListener('click', function(event) {
       event.preventDefault();
       if (self.clickStatus == 'off') {
         screenshareMode(self.session, 'on');
       };
     });
   }
+}

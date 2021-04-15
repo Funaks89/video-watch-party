@@ -2,7 +2,7 @@
   const token = '<%= @token %>';
   const name = '<%= @name %>';
   const moderator_env_name = '<%= @moderator_name %>';
-  (() => {
+  (function() {
     if(window.localStorage) {
       if(!localStorage.getItem('screenshareFirstLoad')) {
         localStorage['screenshareFirstLoad'] = true;

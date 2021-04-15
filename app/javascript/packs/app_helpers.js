@@ -35,13 +35,13 @@ export const screenshareMode = (session, mode) => {
       return `${name}: ${message}`
     };
 
-    export const streamLayout = (element, count) => {
+    export function streamLayout(element, count) {
       if (count >= 6) {
         element.classList.add("grid9");
-      } else if ( count == 5) {
+      } else if (count == 5) {
         element.classList.remove("grid9");
         element.classList.add("grid4");
       } else if (count < 5) {
         element.classList.remove("grid4");
       }
-    };
+    }

@@ -10,6 +10,7 @@ class Session < ApplicationRecord
     session = @opentok.create_session :media_mode => :routed
     record = Session.new
     record.session_id = session.session_id
+    record.save
     @session_id = session.session_id
     @session_id
   end

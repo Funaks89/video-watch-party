@@ -116,7 +116,7 @@ GEM
     nokogiri (1.11.2)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
-    opentok (4.2.0)
+    opentok (4.0.1)
       activesupport (>= 2.0)
       addressable (~> 2.3)
       httparty (>= 0.18.0)

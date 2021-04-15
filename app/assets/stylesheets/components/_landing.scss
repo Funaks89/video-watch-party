@@ -1,0 +1,41 @@
+.landing_box {
+  padding: 32px;
+}
+.landing {
+  margin: auto;
+  text-align: center;
+  font-size: 125%;
+  width: 65%;
+  padding: 32px;
+  border-radius: 8px;
+  background-color: var(--background);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.landing form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+}
+
+.landing input,
+.landing p {
+  margin-bottom: 1em;
+}
+
+.landing input {
+  background-color: #F02A6E;
+}
+
+.landing input:hover {
+    background-color: rgb(233, 51, 115);
+  }
+
+.landing .error {
+  color: maroon;
+  position: absolute;
+  bottom: -2em;
+  width: 100%;
+  text-align: center;
+}

@@ -4,6 +4,6 @@
 </header>
 <div id="history" class="messages"></div>
 <%= form_with(url: "/chat/send", method: "post") do %>
-  <%= text_field_tag :message, nil, placeholder: @chat_placeholder_text %>
+  <%= text_field_tag :message, nil, placeholder: 'Enter something to chat' %>
   <%= submit_tag(@submit_button_text) %>
 <% end %>
