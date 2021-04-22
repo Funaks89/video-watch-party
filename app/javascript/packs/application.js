@@ -9,7 +9,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import './app_helpers.js'
 import './opentok_video.js'
-// import './opentok_screenshare.js'
+import './opentok_screenshare.js'
 
 Rails.start()
 Turbolinks.start()

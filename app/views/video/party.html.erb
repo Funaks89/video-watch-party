@@ -4,12 +4,12 @@
   const moderator_env_name = '<%= @moderator_name %>';
   (function() {
     if(window.localStorage) {
-      if(!localStorage.getItem('screenshareFirstLoad')) {
-        localStorage['screenshareFirstLoad'] = true;
+      if(!localStorage.getItem('firstLoad')) {
+        localStorage['firstLoad'] = true;
         window.location.reload();
       }
     } else {
-      localStorage.removeItem('screenshareFirstLoad');
+      localStorage.removeItem('firstLoad');
     }
   })();
 </script>
@@ -20,8 +20,8 @@
 
 <main class='app'>
   <div class="videos">
-    <div class="screenshare" id="screenshare"></div>
-    <div class="audio" id="audio"></div>
+    <div class="publisher" id="publisher"></div>
+    <div class="subscriber" id="subscribers"></div>
   </div>
 
   <aside class="chat">
