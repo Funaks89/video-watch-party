@@ -1,4 +1,5 @@
 .messages {
+  background-color: cornflowerblue;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -21,6 +22,7 @@
 }
 
 .chat form {
+  background-color: cornflowerblue;
   display: flex;
   padding: 1em;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);

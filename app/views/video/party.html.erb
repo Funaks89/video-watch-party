@@ -13,20 +13,17 @@
     }
   })();
 </script>
+<div class="container">
+    <%= render partial: 'header' %>
+    <div class="videos">
+      <div class="publisher" id="publisher"></div>
+      <div class="subscriber" id="subscribers"></div>
+    </div>
 
-<header>
-  <%= render partial: 'header' %>
-</header>
+    <aside class="chat">
+      <%= render partial: 'chat' %>
+    </aside>
 
-<main class='app'>
-  <div class="videos">
-    <div class="publisher" id="publisher"></div>
-    <div class="subscriber" id="subscribers"></div>
-  </div>
+    <%= render partial: 'button-chat' %>
+</div>
 
-  <aside class="chat">
-    <%= render partial: 'chat' %>
-  </aside>
-
-  <%= render partial: 'button-chat' %>
-</main>
