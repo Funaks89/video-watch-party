@@ -1,4 +1,7 @@
+require 'opentok'
+
 class VideoController < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :set_opentok_vars
   
   def set_opentok_vars
