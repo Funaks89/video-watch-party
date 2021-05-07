@@ -1,15 +1,20 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: gray;
+  background: #459D8C;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .navbar-lewagon .navbar-collapse {
-  // display: flex;
   flex-grow: 0;
+  z-index: 1000;
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+  z-index: 1000;
 }
 
 .avatar {
