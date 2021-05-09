@@ -2,6 +2,8 @@
   padding: 32px;
 }
 .landing {
+  top: 145px;
+  position: absolute;
   margin: auto;
   text-align: center;
   font-size: 125%;
@@ -9,7 +11,9 @@
   padding: 32px;
   border-radius: 8px;
   background-color: var(--background);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  left: 240px;
 }
 
 .landing form {

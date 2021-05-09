@@ -1,11 +1,10 @@
-
-<div class="container d-flex">
 <div class="container">
   <%= render partial: 'header' %>
 </div>
+<div class="container" style="background-image: url(../assets/images/movie_night.jpg);">
   <div class='landing'>
     <h1>Welcome to Tokyo Watch Party!</h1>
-    <p>Enter the name and code to start partyting</p>
+    <p>Enter the name and code to start partying</p>
     <%= form_with(url: '/login', method: 'post') do |f| %>
       <%= f.text_field 'name', placeholder: "please enter your name" %>
       <%= f.password_field 'password', placeholder: "enter the room password" %>
