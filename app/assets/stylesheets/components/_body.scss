@@ -1,7 +1,9 @@
   
 body, html {
+  background: url('../../images/movie_night.jpg');
   background-color: gray;
   height: 100%;
+  z-index: 10;
 }
 #videos {
   position: relative;
