@@ -1,17 +1,17 @@
 <%= render partial: 'header' %>
-<div class="container" style="background-image: linear-gradient(rgba(0,0,0,-0.4),rgba(0,0,0,1.4)), url(../assets/images/movie_night.jpg);">
-  <div class='landing'>
-    <h1>Welcome to Tokyo Watch Party!</h1>
-    <p>Enter the name and code to start partying</p>
-      <%= form_with(url: '/login', method: 'post') do |f| %>
-      <%= f.text_field 'name', placeholder: "please enter your name" %>
-      <%= f.password_field 'password', placeholder: "enter the room password" %>
-      <%= f.submit "Submit", style: "background-color: red;" %>
-      <% flash.each do |type, msg| %>
-        <p class="error"><%= "error" %></p>
+  <div class="container">
+    <div class='landing'>
+      <h1>Welcome to Tokyo Watch Party!</h1>
+      <p>Enter the name and code to start partying</p>
+        <%= form_with(url: '/login', method: 'post') do |f| %>
+        <%= f.text_field 'name', placeholder: "please enter your name" %>
+        <%= f.password_field 'password', placeholder: "enter the room password" %>
+        <%= f.submit "Submit", style: "background-color: red;" %>
+        <% flash.each do |type, msg| %>
+          <p class="error"><%= "error" %></p>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
-</div>
 
 
