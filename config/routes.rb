@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root controller: :rooms, action: :index
+  root controller: :rooms, action: :chat
   resources :room_messages
   resources :rooms
   devise_for :users
