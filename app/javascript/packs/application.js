@@ -10,6 +10,9 @@ import "channels"
 import './app_helpers.js'
 import './opentok_video.js'
 import './opentok_screenshare.js'
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
 
 Rails.start()
 Turbolinks.start()
